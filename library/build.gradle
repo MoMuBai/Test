@@ -44,9 +44,8 @@ install {
         pom {
             project {
                 packaging 'aar'
-                name 'muBarLibrary For Android'                                   // #修改# // 标题
+                name 'Less Code For Android'
                 url siteUrl
-                // Set your license
                 licenses {
                     license {
                         name 'The Apache Software License, Version 2.0'
@@ -55,9 +54,9 @@ install {
                 }
                 developers {
                     developer {
-                        id 'mubai'                                           // #修改# // 你的userid，昵称
-                        name 'mubai.lzw'                                       // #修改# // 用户名
-                        email 'quickly520@126.com'                               // #修改# // 邮箱
+                        id 'mubai'
+                        name 'mubai.lzw'
+                        email 'quickly520@126.com'
                     }
                 }
                 scm {
@@ -69,7 +68,6 @@ install {
         }
     }
 }
-
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
@@ -95,11 +93,10 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 bintray {
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.apikey")
-    // 上面两个 user和key 需要留意一下，在local.properites 里面配置的
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "muBarLibrary"                                                 // #修改# //  在 jcenter 上面的项目名字
+        name = "test-library"                // project name in jcenter
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
