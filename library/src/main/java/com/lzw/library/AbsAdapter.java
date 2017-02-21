@@ -1,4 +1,4 @@
-package com.lzw.library.base;
+package com.lzw.library;
 
 import android.content.Context;
 import android.view.LayoutInflater;
